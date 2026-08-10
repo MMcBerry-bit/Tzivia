@@ -32,7 +32,7 @@ Tzivia models memory as a typed, decaying knowledge graph with a dedicated routi
 | Retrieval latency | **88ms** for 25 knowledge chains | 1,000,000-token corpus |
 | Compression | **99.6%** search-space reduction | 1M tokens → 3,861 synthesis nodes |
 
-*Benchmarks are from internal v5.0 planning builds. Methodology and reproduction details available on request.*
+*Methodology and reproduction details available on request.*
 
 ## Applied Result: DNA Decay Finder
 
@@ -57,17 +57,22 @@ To validate the graph-decay mechanics on real data, Tzivia's decay model was app
         └──────────────────────────────────┘
                │
         ┌──────▼──────┐
-        │  Postgres   │  route persistence
+        │   SQLite    │  local persistence
         └─────────────┘
 ```
 
-- **Multi-tenant** with zero-knowledge encryption
-- **Route persistence** on Supabase / PostgreSQL
-- **Consumer UI** with a dark neural aesthetic and real-time 3D knowledge-graph visualization (Fibonacci-sphere layout, force-directed)
+- **SQLite persistence** — zero-configuration local storage; the full graph lives in a single file
+- **Single-tenant by design** — your memory graph stays on your machine
+
+## Roadmap
+
+- PostgreSQL / Supabase backend for hosted, multi-tenant deployments
+- Zero-knowledge encryption for multi-tenant mode
+- Real-time 3D knowledge-graph visualization (Fibonacci-sphere layout, force-directed)
 
 ## Status
 
-Tzivia is in active development at **v5.1**, progressing toward **v6.0**. Core components — ARIA routing, Vec4 scoring, the typed edge store, the logic engine, and the validated DNA decay finder — are working and benchmarked.
+Tzivia is in active development at **v5.1**. Core components — ARIA routing, Vec4 scoring, the typed edge store, the logic engine, and the validated DNA decay finder — are working and benchmarked. Public launch targeted for **December 2026**.
 
 ## About
 
