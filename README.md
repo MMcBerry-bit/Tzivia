@@ -2,7 +2,7 @@
 
 **Middleware that makes LLMs faster and cheaper.**
 
-Tzivia is a persistent memory and reasoning layer that attaches to any large language model. Instead of re-feeding entire context windows on every call, Kapeka retrieves only the relevant knowledge chains — cutting search space, latency, and token cost by orders of magnitude.
+Tzivia is a persistent memory and reasoning layer that attaches to any large language model. Instead of re-feeding entire context windows on every call, Tzivia retrieves only the relevant knowledge chains — cutting search space, latency, and token cost by orders of magnitude.
 
 > ⚡ **3,136× faster routing than linear search** at 100k items
 > 🧠 **88ms** to retrieve 25 knowledge chains from **1,000,000 tokens**
@@ -22,7 +22,7 @@ Tzivia models memory as a typed, decaying knowledge graph with a dedicated routi
 - **4D vector scoring (Vec4)** — every node is scored across four independent dimensions: frequency, accuracy, connectivity, and inference weight. Retrieval balances all four rather than relying on similarity alone.
 - **Typed semantic relationships** — 10 distinct edge types (not just "related to"), enabling a formal logic engine to reason over the graph with defined inference rules.
 - **Synthesis nodes** — a persistent insight layer that doesn't decay. Discovered patterns are promoted into durable knowledge instead of being recomputed every session.
-- **MCP server architecture** — Kapeka attaches to LLMs through the Model Context Protocol, making it a drop-in memory layer for any compatible model.
+- **MCP server architecture** — Tzivia attaches to LLMs through the Model Context Protocol, making it a drop-in memory layer for any compatible model.
 
 ## Benchmarks
 
@@ -67,7 +67,7 @@ To validate the graph-decay mechanics on real data, Tzivia's decay model was app
 
 ## Status
 
-Kapeka-AI is in active development at **v4.7**, progressing toward **v5.0**. Core components — ARIA routing, Vec4 scoring, the typed edge store, the logic engine, and the validated DNA decay finder — are working and benchmarked.
+Tzivia is in active development at **v5.1**, progressing toward **v6.0**. Core components — ARIA routing, Vec4 scoring, the typed edge store, the logic engine, and the validated DNA decay finder — are working and benchmarked.
 
 ## About
 
