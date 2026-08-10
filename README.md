@@ -1,8 +1,8 @@
-# Kapeka-AI
+# Tzivia
 
 **Middleware that makes LLMs faster and cheaper.**
 
-Kapeka-AI is a persistent memory and reasoning layer that attaches to any large language model. Instead of re-feeding entire context windows on every call, Kapeka retrieves only the relevant knowledge chains — cutting search space, latency, and token cost by orders of magnitude.
+Tzivia is a persistent memory and reasoning layer that attaches to any large language model. Instead of re-feeding entire context windows on every call, Kapeka retrieves only the relevant knowledge chains — cutting search space, latency, and token cost by orders of magnitude.
 
 > ⚡ **3,136× faster routing than linear search** at 100k items
 > 🧠 **88ms** to retrieve 25 knowledge chains from **1,000,000 tokens**
@@ -16,7 +16,7 @@ Every LLM call today pays the same tax: context has to be stuffed into the promp
 
 ## The Approach
 
-Kapeka-AI models memory as a typed, decaying knowledge graph with a dedicated routing algorithm on top:
+Tzivia models memory as a typed, decaying knowledge graph with a dedicated routing algorithm on top:
 
 - **ARIA routing algorithm** — sub-linear traversal that reaches relevant nodes without scanning the full store. Benchmarked at 3,136× faster than linear search at 100k items.
 - **4D vector scoring (Vec4)** — every node is scored across four independent dimensions: frequency, accuracy, connectivity, and inference weight. Retrieval balances all four rather than relying on similarity alone.
@@ -36,7 +36,7 @@ Kapeka-AI models memory as a typed, decaying knowledge graph with a dedicated ro
 
 ## Applied Result: DNA Decay Finder
 
-To validate the graph-decay mechanics on real data, Kapeka's decay model was applied to cancer genomics. The **DNA decay finder** detects mutation hotspots and was validated against the public **TCGA** cancer genomics dataset — demonstrating that the same routing and decay machinery that accelerates LLM memory generalizes to structured scientific data.
+To validate the graph-decay mechanics on real data, Tzivia's decay model was applied to cancer genomics. The **DNA decay finder** detects mutation hotspots and was validated against the public **TCGA** cancer genomics dataset — demonstrating that the same routing and decay machinery that accelerates LLM memory generalizes to structured scientific data.
 
 ## Architecture at a Glance
 
@@ -79,4 +79,4 @@ The full engine is under active development and kept private as core IP. This re
 
 ---
 
-*Kapeka-AI — persistent memory and reasoning for any LLM.*
+*Tzivia — persistent memory and reasoning for any LLM.*
