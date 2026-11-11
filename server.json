@@ -1,0 +1,29 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.MMcBerry-bit/tzivia",
+  "title": "Tzivia-AI",
+  "description": "Persistent memory for AI agents. Hosted cloud connector or local Windows install.",
+  "version": "5.1.1",
+  "websiteUrl": "https://tzivia.dev",
+  "repository": {
+    "url": "https://github.com/MMcBerry-bit/Tzivia",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/MMcBerry-bit/Tzivia/releases/download/v5.1.0/tzivia-mcp-5.1.0.mcpb",
+      "version": "5.1.0",
+      "fileSha256": "497af05135fab5e41ff3b1e13bbe02f0ecfa7fa6d2b93b36b7781da2d8b44620",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.tzivia.dev/mcp"
+    }
+  ]
+}
