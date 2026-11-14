@@ -70,9 +70,21 @@ To validate the graph-decay mechanics on real data, Tzivia's decay model was app
 - Zero-knowledge encryption for multi-tenant mode
 - Real-time 3D knowledge-graph visualization (Fibonacci-sphere layout, force-directed)
 
+## Install
+
+**Tzivia-AI v5.1.0 is out (Windows).**
+
+1. Download `Tzivia-AI-Setup-5.1.0.exe` from the [latest release](https://github.com/MMcBerry-bit/Tzivia/releases/latest) and run it.
+2. Connect your AI app:
+   - **Claude Desktop:** download `tzivia-mcp-5.1.0.mcpb` from the same release and double-click it.
+   - **Any MCP client:** Tzivia is listed in the official MCP Registry as `io.github.MMcBerry-bit/tzivia`.
+3. Ask your AI to remember something, then ask it to recall it.
+
+More at [tzivia.dev](https://tzivia.dev).
+
 ## Status
 
-Tzivia is in active development at **v5.1**. Core components — ARIA routing, Vec4 scoring, the typed edge store, the logic engine, and the validated DNA decay finder — are working and benchmarked. Public launch targeted for **December 2026**.
+**v5.1.0 released November 6, 2026.** Free for personal use under the [Tzivia-AI EULA](https://tzivia.dev/terms). Core components — ARIA routing, Vec4 scoring, the typed edge store, the logic engine, and the validated DNA decay finder — are working and benchmarked.
 
 ## About
 
@@ -80,7 +92,7 @@ Built by **Matthew McBerry**, founder & CEO of **Dorcas Innovations**.
 
 The full engine is under active development and kept private as core IP. This repository is a public overview — for a live demo, benchmark reproduction, or partnership inquiries, reach out.
 
-📧 MatthewMcBerry@DorcasInnovations.onmicrosoft.com
+📧 matthew@tzivia.dev
 
 ---
 
