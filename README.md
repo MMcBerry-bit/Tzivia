@@ -5,7 +5,8 @@
 Tzivia is a persistent memory and reasoning layer that attaches to any large language model. Instead of re-feeding entire context windows on every call, Tzivia retrieves only the relevant knowledge chains — cutting search space, latency, and token cost by orders of magnitude.
 
 > ⚡ **3,136× faster routing than linear search** at 100k items
-> 🧠 **88ms** to retrieve 25 knowledge chains from **1,000,000 tokens**
+> 🎯 **50.1% vs 44.6%** against Mem0 on the full LoCoMo long-term memory benchmark, with **$0** spent saving memories
+> 🧠 **50ms** average recall (65ms p95) from a **1,000,000-token** memory
 > 🗜️ **99.6%** search-space reduction (1M tokens → 3,861 synthesis nodes)
 
 ---
@@ -29,10 +30,13 @@ Tzivia models memory as a typed, decaying knowledge graph with a dedicated routi
 | Metric | Result | Condition |
 |---|---|---|
 | Routing speed | **3,136× faster** than linear search | 100,000 items |
-| Retrieval latency | **88ms** for 25 knowledge chains | 1,000,000-token corpus |
+| LoCoMo accuracy | **50.1%** (Mem0 44.6%, naive RAG 35.7%, full context 53.3%) | 10 conversations, 1,540 questions, gpt-4o-mini answer + judge |
+| Recall latency | **50ms** avg / **65ms** p95 | 1,000,000-token memory, 8 vCPU / 8 GB |
+| Ingestion | **~3,500 tokens/sec** | 1,000,000-token corpus, same server |
+| Cost to save | **$0** (no LLM calls) | Mem0 calls an LLM on every message |
 | Compression | **99.6%** search-space reduction | 1M tokens → 3,861 synthesis nodes |
 
-*Methodology and reproduction details available on request.*
+*Measured November 2026. LoCoMo: every system got the same questions, answer model and judge, with about 500 tokens of context per question; Mem0 is the open-source `mem0ai` library run by us, not Mem0's hosted platform or published setup. Full results: [tzivia.dev/benchmarks](https://tzivia.dev/benchmarks).*
 
 ## Applied Result: DNA Decay Finder
 
